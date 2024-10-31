@@ -1,8 +1,19 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+import useSection from '../store/useSection';
+import SearchBar from './SearchBar';
+import { useEffect } from 'react';
 
 function Fetch(props) {
+  const { setSection } = useSection();
+
+  useEffect(() => {
+    setSection(props.section);
+  }, [props.section, setSection])
+
   return (
-    <h1>{props.section}</h1>
+    <>
+      <SearchBar />
+    </>
   )
 }
 

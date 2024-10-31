@@ -28,11 +28,24 @@ body {
   border:none;
   border-radius: 8%;
   background-color: var(--fifth-color);
+  cursor: pointer;
+}
+
+.filter-btn:active {
+  background-color: var(--third-color);
+  color: var(--first-color);
 }
 
 .active-btn {
   background-color: var(--fourth-color);
   color: var(--first-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .navbar1 {
@@ -52,7 +65,40 @@ body {
   flex-direction: row;
   gap: 0.5rem;
   padding: 1rem; 
-  background-color: var(--second-color)
+  background-color: var(--second-color);
+}
+
+.search-bar {
+  margin-top: 1.5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 8px black;
+  display: inline-flex;
+}
+
+.search-input {
+  height: 2.8rem;
+  width: 20rem;
+  border:none;
+  outline: none;
+  box-shadow: none;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  font-size: 1.25rem;
+}
+
+.search-button {
+  color: var(--first-color);
+  background-color: var(--fourth-color);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.search-button:active {
+  background-color: var(--third-color);
 }
 
 .title {
@@ -61,4 +107,16 @@ body {
 
 .white-text {
   color: whitesmoke;
+}
+
+@media (max-width: 420px) {
+  .search-input {
+    width: 16rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .search-input {
+    width: 35rem;
+  }
 }
