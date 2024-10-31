@@ -1,0 +1,64 @@
+:root {
+  --first-color: #F8F4E1;
+  --second-color: #AF8F6F;
+  --third-color: #74512D;
+  --fourth-color: #543310;
+  --fifth-color: whitesmoke;
+  --title-size: 2.5rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fifth-color);
+}
+
+.book-icon {
+  width: var(--title-size);
+  height: var(--title-size);
+}
+
+.black-text {
+  color: black;
+}
+
+.filter-btn {
+  width: 7rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  border:none;
+  border-radius: 8%;
+  background-color: var(--fifth-color);
+}
+
+.active-btn {
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+}
+
+.navbar1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--fourth-color);
+  padding: 1rem; 
+  gap: 0.8rem;
+}
+
+.navbar2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 1rem; 
+  background-color: var(--second-color)
+}
+
+.title {
+  font-size: var(--title-size);
+}
+
+.white-text {
+  color: whitesmoke;
+}
