@@ -11,9 +11,9 @@ function Fetch(props) {
   }, [props.section, setSection])
 
   return (
-    <>
+    <div className="fetch-container">
       <SearchBar />
-    </>
+    </div>
   )
 }
 
