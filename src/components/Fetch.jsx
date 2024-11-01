@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import useSection from '../store/useSection';
 import SearchBar from './SearchBar';
 import { useEffect } from 'react';
+import BookCard from './BookCard';
 
 function Fetch(props) {
   const { setSection } = useSection();
@@ -14,6 +15,7 @@ function Fetch(props) {
     <div className="fetch-container">
       <SearchBar />
       <div className="cards-container">
+        <BookCard />
       </div>
     </div>
   )

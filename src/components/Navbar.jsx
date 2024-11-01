@@ -42,19 +42,19 @@ function Navbar() {
         </nav>
         <nav className="navbar2">
             <button 
-              className="filter-btn" 
+              className="filter-btn not-active-btn" 
               ref={nameRef}
               onClick={(e)=>clickFilterButton(e, '/name')}>
               Name
             </button>
             <button 
-              className="filter-btn"
+              className="filter-btn not-active-btn"
               ref={authorRef}
               onClick={(e)=>clickFilterButton(e, '/author')}>
               Author
             </button>
             <button 
-              className="filter-btn"
+              className="filter-btn not-active-btn"
               ref={subjectRef}
               onClick={(e)=>clickFilterButton(e, '/subject')}>
               Subject
