@@ -13,6 +13,8 @@ function Fetch(props) {
   return (
     <div className="fetch-container">
       <SearchBar />
+      <div className="cards-container">
+      </div>
     </div>
   )
 }
