@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 import { useEffect, useState } from 'react';
 import BookCard from './BookCard';
 import BookModal from './BookModal';
-import useBookModal from '../store/useModal';
+import useBookModal from '../store/useBookModal';
 import useAPI from '../store/useAPI';
 
 function Fetch(props) {

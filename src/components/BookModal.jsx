@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import useBookModal from '../store/useModal';
+import useBookModal from '../store/useBookModal';
 
 function BookModal(props) {
     const { showModal, toggleModal } = useBookModal();
