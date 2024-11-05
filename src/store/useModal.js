@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-const useBookModal = create((set) => ({
+const useModal = create((set) => ({
   showModal: false,
 
   toggleModal: () => set((state) => {
@@ -10,4 +10,4 @@ const useBookModal = create((set) => ({
   })
 }));
 
-export default useBookModal
+export default useModal

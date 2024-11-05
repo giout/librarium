@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function BookCard(props) {
+function Modal(props) {
   return (
     <div className="card-container" onClick={props.clickMethod}>
         <div className="card-img-container">
@@ -12,11 +12,11 @@ function BookCard(props) {
   )
 }
 
-BookCard.propTypes = {
+Modal.propTypes = {
   imgSrc: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.string,
   clickMethod: PropTypes.func
 };
 
-export default BookCard
+export default Modal

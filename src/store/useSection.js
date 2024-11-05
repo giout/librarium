@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 const useSection = create((set) => ({
-  section: 'name',
+  section: 'films',
   setSection: (string) => set(() => {
     return {
         section: string

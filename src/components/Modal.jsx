@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
-import useBookModal from '../store/useBookModal';
+import useModal from '../store/useModal';
 
-function BookModal(props) {
-    const { showModal, toggleModal } = useBookModal();
+function Modal(props) {
+    const { showModal, toggleModal } = useModal();
 
     return (
         showModal ? (
@@ -44,7 +44,7 @@ function BookModal(props) {
     );
 }
 
-BookModal.propTypes = {
+Modal.propTypes = {
     title: PropTypes.string,
     rating: PropTypes.number,
     date: PropTypes.string,
@@ -52,4 +52,4 @@ BookModal.propTypes = {
     overview: PropTypes.string
 };
 
-export default BookModal;
+export default Modal;
