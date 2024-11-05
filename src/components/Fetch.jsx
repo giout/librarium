@@ -11,7 +11,7 @@ import Loader from './Loader';
 
 function Fetch(props) {
   const { setSection } = useSection();
-  const { showModal, toggleModal } = useBookModal();
+  const { toggleModal } = useBookModal();
   const [ selectedBook, setSelectedBook ] = useState({});
   const { books } = useAPI();
   const { loading } = useLoading();
@@ -50,16 +50,13 @@ function Fetch(props) {
           )
         }
       </div>
-      {showModal ? (
-        <BookModal
-          title={selectedBook.name}
-          author={selectedBook.author}
-          rating={selectedBook.rating}
-          date={selectedBook.date}
-          subjects={selectedBook.subjects}
-          characters={selectedBook.characters} />
-        ) : <></>
-      }
+      <BookModal
+        title={selectedBook.name}
+        author={selectedBook.author}
+        rating={selectedBook.rating}
+        date={selectedBook.date}
+        subjects={selectedBook.subjects}
+        characters={selectedBook.characters} />
     </div>
   )
 }
