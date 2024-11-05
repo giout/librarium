@@ -34,7 +34,7 @@ function Navbar() {
     <>
         <nav className="navbar1">
             <img className="book-icon" src="./public/book.svg" alt="" />
-            <span className="white-text title">Librarium</span>
+            <span className="white-text title">Memorabilia</span>
         </nav>
         <nav className="navbar2">
             <button 
