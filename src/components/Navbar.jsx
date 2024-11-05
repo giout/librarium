@@ -9,7 +9,7 @@ function Navbar() {
   const nameRef = useRef(null);
   const authorRef = useRef(null);
   const navigate = useNavigate();
-  const { setSection, section } = useSection()
+  const { setSection, section } = useSection();
 
   useEffect(() => {
     // filter button will be activated according to the current section
