@@ -38,7 +38,7 @@ body {
   color: black;
 }
 
-.brown-icon {
+.first-color-icon {
   fill: var(--fourth-color);
 }
 
@@ -269,36 +269,21 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
-  align-items: start;
-}
-
-.modal-book-author {
-  width: 100%;
-  display: block;
-  font-size: 1.3rem;
-  white-space: normal;
-  word-wrap: break-word;
-  line-height: 0.3;
-  margin-top: 0.8rem;
-}
-
-.modal-book-title {
-  width: 100%;
-  display: block;
-  font-size: 1.7rem;
-  white-space: normal;
-  word-wrap: break-word;
-  line-height: 0.9;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
 }
 
 .modal-content {
   margin-top: 3.5rem;
   width: 80%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 3.5rem;
 }
 
 .modal-icon {
@@ -318,7 +303,6 @@ footer {
 .modal-line {
   border: 0.1rem solid black;
   width: 100%;
-  margin-top: 1rem;
 }
 
 .modal-overlay {
@@ -335,6 +319,19 @@ footer {
 
 .modal-text {
   font-size: 1.2rem;
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 1.7rem;
+  line-height: 0.9;
+  margin-bottom: 1rem;
+}
+
+.modal-wrap-text {
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .navbar1 {

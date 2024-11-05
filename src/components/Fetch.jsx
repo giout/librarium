@@ -14,12 +14,12 @@ function Fetch(props) {
   const [ selectedBook, setSelectedBook ] = useState({});
   const books  = [
     {
-      title: 'The babadook',
-      cover: '...',
+      name: 'Gladiator',
+      cover: 'https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg',
       language: 'en',
       date: '2000-05-04',
-      rating: 5,
-      overview: '...'
+      rating: 8.2,
+      overview: "In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos.  Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor.  As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed.  He escapes, but is captured by slave traders.  Renamed Spaniard and forced to become a gladiator, Maximus must battle to the death with other men for the amusement of paying audiences.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     }
   ]
   const { loading } = useLoading();
@@ -60,11 +60,10 @@ function Fetch(props) {
       </div>
       <BookModal
         title={selectedBook.name}
-        author={selectedBook.author}
         rating={selectedBook.rating}
-        date={selectedBook.date}
-        subjects={selectedBook.subjects}
-        characters={selectedBook.characters} />
+        date={selectedBook.date} 
+        language={selectedBook.language}
+        overview={selectedBook.overview}/>
     </div>
   )
 }

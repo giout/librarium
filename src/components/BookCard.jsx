@@ -4,7 +4,7 @@ function BookCard(props) {
   return (
     <div className="card-container" onClick={props.clickMethod}>
         <div className="card-img-container">
-          <img className="card-img" src={props.imgSrc || './src/assets/book-default.png'} />
+          <img className="card-img" src={props.imgSrc} />
         </div>
         <span className="card-title text-overflow"><strong>{props.title || ''}</strong></span>
         <span className="card-date text-overflow">{props.date || ''}</span>
@@ -15,7 +15,7 @@ function BookCard(props) {
 BookCard.propTypes = {
   imgSrc: PropTypes.string,
   title: PropTypes.string,
-  date: PropTypes.number,
+  date: PropTypes.string,
   clickMethod: PropTypes.func
 };
 
