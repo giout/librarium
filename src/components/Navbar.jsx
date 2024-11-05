@@ -33,7 +33,7 @@ function Navbar() {
   return (
     <>
         <nav className="navbar1">
-            <img className="book-icon" src="src/assets/book.svg" alt="" />
+            <img className="book-icon" src="./public/book.svg" alt="" />
             <span className="white-text title">Librarium</span>
         </nav>
         <nav className="navbar2">
