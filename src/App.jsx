@@ -13,10 +13,9 @@ function App() {
           </header>
           <main>
             <Routes>
-              <Route path="/" element={<Navigate to="/name"/>} />
-              <Route path="/name" element={<Fetch section="Name"/>}/>
-              <Route path="/author" element={<Fetch section="Author"/>}/>
-              <Route path="/subject" element={<Fetch section="Subject"/>}/>
+              <Route path="/" element={<Navigate to="/films"/>} />
+              <Route path="/films" element={<Fetch section="films"/>}/>
+              <Route path="/tv" element={<Fetch section="tv"/>}/>
             </Routes>
           </main>
           <footer>

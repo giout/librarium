@@ -6,22 +6,22 @@ import useSection from "../store/useSection";
 
 function Navbar() {
   const { setActive } = useButton();
-  const nameRef = useRef(null);
-  const authorRef = useRef(null);
+  const filmsRef = useRef(null);
+  const tvRef = useRef(null);
   const navigate = useNavigate();
   const { setSection, section } = useSection();
 
   useEffect(() => {
     // filter button will be activated according to the current section
     switch(section.toLowerCase()){
-      case 'name':
-        setActive(nameRef.current);
+      case 'films':
+        setActive(filmsRef.current);
         break;
-      case 'author':
-        setActive(authorRef.current);
+      case 'tv':
+        setActive(tvRef.current);
         break;
       default:
-        setSection('name')
+        setSection('films')
     }
   }, [setActive, section, setSection]);
   
@@ -39,15 +39,15 @@ function Navbar() {
         <nav className="navbar2">
             <button 
               className="filter-btn not-active-btn" 
-              ref={nameRef}
-              onClick={(e)=>clickFilterButton(e, '/name')}>
-              Name
+              ref={filmsRef}
+              onClick={(e)=>clickFilterButton(e, '/films')}>
+              Films
             </button>
             <button 
               className="filter-btn not-active-btn"
-              ref={authorRef}
-              onClick={(e)=>clickFilterButton(e, '/author')}>
-              Author
+              ref={tvRef}
+              onClick={(e)=>clickFilterButton(e, '/tv')}>
+              TV
             </button>
         </nav>
     </>
