@@ -12,7 +12,16 @@ function Fetch(props) {
   const { setSection } = useSection();
   const { toggleModal } = useBookModal();
   const [ selectedBook, setSelectedBook ] = useState({});
-  const books  = []
+  const books  = [
+    {
+      title: 'The babadook',
+      cover: '...',
+      language: 'en',
+      date: '2000-05-04',
+      rating: 5,
+      overview: '...'
+    }
+  ]
   const { loading } = useLoading();
 
   const handleCardClick = (book) => {
