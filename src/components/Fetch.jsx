@@ -6,13 +6,15 @@ import BookCard from './BookCard';
 import BookModal from './BookModal';
 import useBookModal from '../store/useBookModal';
 import useAPI from '../store/useAPI';
+import useLoading from '../store/useLoading';
+import Loader from './Loader';
 
 function Fetch(props) {
   const { setSection } = useSection();
   const { showModal, toggleModal } = useBookModal();
   const [ selectedBook, setSelectedBook ] = useState({});
-
   const { books } = useAPI();
+  const { loading } = useLoading();
 
   const handleCardClick = (book) => {
     setSelectedBook(book);
@@ -28,14 +30,24 @@ function Fetch(props) {
       <SearchBar />
       <div className="cards-container">
         {
-          books.map((book, index) => (
-            <BookCard 
-              key={index}
-              title={book.name}
-              date={book.date}
-              imgSrc={book.cover} 
-              clickMethod={() => handleCardClick(book)}/>
-          ))
+          loading ? (
+            <div className="loader-container">
+              <Loader />
+            </div>
+          ) : (
+            <>
+                {
+                  books.map((book, index) => (
+                    <BookCard 
+                      key={index}
+                      title={book.name}
+                      date={book.date}
+                      imgSrc={book.cover} 
+                      clickMethod={() => handleCardClick(book)}/>
+                  ))
+                }
+            </>
+          )
         }
       </div>
       {showModal ? (
@@ -46,7 +58,7 @@ function Fetch(props) {
           date={selectedBook.date}
           subjects={selectedBook.subjects}
           characters={selectedBook.characters} />
-      ) : <></>
+        ) : <></>
       }
     </div>
   )
