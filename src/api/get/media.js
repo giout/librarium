@@ -1,9 +1,8 @@
 import { url } from "../config"
 
-export const searchForMedia = async (section, param) => {
-    console.log(section)
+export const searchForMedia = async (section, param, page) => {
     // http request
-    const res = await fetch(url.search(section, param));
+    const res = await fetch(url.search(section, param, page));
 
     // handle error
     if (!res.ok) {

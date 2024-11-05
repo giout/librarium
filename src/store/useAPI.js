@@ -5,8 +5,8 @@ const useAPI = create((set) => ({
     data: [],
     results: 0,
     clean: () => set({ data: [] }),
-    fetchData: async (section, param) => {
-        const result = await searchForMedia(section, param);
+    fetchData: async (section, param, page) => {
+        const result = await searchForMedia(section, param, page);
         set ({
             data: result.media,
             results: result.results
