@@ -1,8 +1,8 @@
 :root {
-  --first-color: #f8f4e1;
-  --second-color: #af8f6f;
-  --third-color: #74512d;
-  --fourth-color: #543310;
+  --first-color: #F8EDFF;
+  --second-color: #BFCFE7;
+  --third-color: #525CEB;
+  --fourth-color: #3D3B40;
   --fifth-color: whitesmoke;
   --title-size: 2.5rem;
 }
@@ -20,7 +20,7 @@ a:checked {
 
 .active-btn {
   background-color: var(--fourth-color);
-  color: var(--first-color);
+  color: var(--fifth-color);
 }
 
 body {
@@ -412,7 +412,7 @@ footer {
 }
 
 .search-button {
-  color: var(--first-color);
+  color: var(--fifth-color);
   background-color: var(--fourth-color);
   border: none;
   width: 3rem;
