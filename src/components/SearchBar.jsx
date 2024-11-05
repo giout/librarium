@@ -5,14 +5,14 @@ import useLoading from '../store/useLoading';
 
 function SearchBar() {
     const { section } = useSection();
-    const { getBooks, clean } = useAPI();
+    const { fetchData, clean } = useAPI();
     const [input, setInput] = useState('');
     const { setLoading, quitLoading } = useLoading();
 
     const handleSearch = async () => {
         clean();
         setLoading();
-        await getBooks(section, input);
+        await fetchData(section, input);
         quitLoading();
     }
 

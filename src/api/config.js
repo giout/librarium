@@ -1,16 +1,17 @@
-const apiBooks = import.meta.env.VITE_API_BOOKS;
-const apiCovers = import.meta.env.VITE_API_COVERS;
+const api = import.meta.env.VITE_API_URL;
+const apiPoster = import.meta.env.VITE_API_POSTER;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 export const url = {
-    searchBooks: (section, param) => {
-        if (section.toLowerCase() == 'author'){
-            return `${apiBooks}/search.json?author=${param}`;
+    search: (section, param, page=1) => {
+        if (section.toLowerCase() == 'films'){
+            return `${api}/search/movie?api_key=${apiKey}&query=${param}&page=${page}`;
         }
-        if (section.toLowerCase() == 'name'){
-            return `${apiBooks}/search.json?q=${param}`; 
+        if (section.toLowerCase() == 'tv'){
+            return `${api}/search/tv?api_key=${apiKey}&query=${param}&page=${page}`;
         }
     },
-    covers: (cover) => {
-        return `${apiCovers}/${cover}-L.jpg`;
+    poster: (poster) => {
+        return `${apiPoster}/${poster}`;
     }
 }   
