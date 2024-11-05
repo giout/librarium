@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import BookCard from './BookCard';
 import BookModal from './BookModal';
 import useBookModal from '../store/useBookModal';
-import useAPI from '../store/useAPI';
 import useLoading from '../store/useLoading';
 import Loader from './Loader';
 
@@ -13,7 +12,7 @@ function Fetch(props) {
   const { setSection } = useSection();
   const { toggleModal } = useBookModal();
   const [ selectedBook, setSelectedBook ] = useState({});
-  const { books } = useAPI();
+  const books  = []
   const { loading } = useLoading();
 
   const handleCardClick = (book) => {
