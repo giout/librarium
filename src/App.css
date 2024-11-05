@@ -29,18 +29,10 @@ body {
   background-color: var(--fifth-color);
 }
 
-.book-icon {
-  width: var(--title-size);
-  height: var(--title-size);
-}
-
 .black-text {
   color: black;
 }
 
-.first-color-icon {
-  fill: var(--fourth-color);
-}
 
 .cancel-modal {
   top: 1rem;
@@ -122,6 +114,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.film-icon {
+  width: var(--title-size);
+  height: var(--title-size);
+  fill: var(--fifth-color);
+}
+
+.first-color-icon {
+  fill: var(--fourth-color);
 }
 
 .filter-btn {
