@@ -1,9 +1,6 @@
 import { url } from "../config"
 
 export const searchBooks = async (section, param) => {
-    console.log(
-        url.searchBooks(section, param)
-    )
     // http request
     const res = await fetch(url.searchBooks(section, param));
 
@@ -33,6 +30,5 @@ export const searchBooks = async (section, param) => {
         }  
         books.push(sample)
     }
-    console.log(books)
     return books;
 }

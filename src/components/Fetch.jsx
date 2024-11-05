@@ -1,38 +1,23 @@
 import PropTypes from 'prop-types'
 import useSection from '../store/useSection';
 import SearchBar from './SearchBar';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import BookCard from './BookCard';
 import BookModal from './BookModal';
 import useBookModal from '../store/useModal';
+import useAPI from '../store/useAPI';
 
 function Fetch(props) {
   const { setSection } = useSection();
   const { showModal, toggleModal } = useBookModal();
+  const [ selectedBook, setSelectedBook ] = useState({});
 
-  const data = [
-    {
-      cover: "https://covers.openlibrary.org/b/isbn/9781611748864-L.jpg",
-      name: "The Lord of the Rings",
-      author: "J.R.R. Tolkien",
-      date: 1954,
-      rating: 4.556962,
-      subjects: [
-        "The Lord of the Rings",
-        "Fiction",
-        "Ficción",
-        "English Fantasy fiction",
-        "Ficción fantástica inglesa",
-      ],
-      characters: [
-        "Frodo Baggins",
-        "Samwise Gamgee",
-        "Meriadoc Brandybuck",
-        "Peregrin Took",
-        "Gandalf the Grey",
-      ]
-    },
-  ]
+  const { books } = useAPI();
+
+  const handleCardClick = (book) => {
+    setSelectedBook(book);
+    toggleModal();
+  }
 
   useEffect(() => {
     setSection(props.section);
@@ -43,18 +28,24 @@ function Fetch(props) {
       <SearchBar />
       <div className="cards-container">
         {
-          data.map((book, index) => (
+          books.map((book, index) => (
             <BookCard 
               key={index}
               title={book.name}
               date={book.date}
               imgSrc={book.cover} 
-              clickMethod={toggleModal}/>
+              clickMethod={() => handleCardClick(book)}/>
           ))
         }
       </div>
       {showModal ? (
-        <BookModal/>
+        <BookModal
+          title={selectedBook.name}
+          author={selectedBook.author}
+          rating={selectedBook.rating}
+          date={selectedBook.date}
+          subjects={selectedBook.subjects}
+          characters={selectedBook.characters} />
       ) : <></>
       }
     </div>
