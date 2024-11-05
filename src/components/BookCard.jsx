@@ -15,7 +15,7 @@ function BookCard(props) {
 BookCard.propTypes = {
   imgSrc: PropTypes.string,
   title: PropTypes.string,
-  date: PropTypes.string,
+  date: PropTypes.number,
   clickMethod: PropTypes.func
 };
 
