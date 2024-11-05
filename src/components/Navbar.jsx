@@ -8,7 +8,6 @@ function Navbar() {
   const { setActive } = useButton();
   const nameRef = useRef(null);
   const authorRef = useRef(null);
-  const subjectRef = useRef(null);
   const navigate = useNavigate();
   const { setSection, section } = useSection()
 
@@ -21,11 +20,8 @@ function Navbar() {
       case 'author':
         setActive(authorRef.current);
         break;
-      case 'subject':
-        setActive(subjectRef.current);
-        break;
       default:
-        setSection('Name')
+        setSection('name')
     }
   }, [setActive, section, setSection]);
   
@@ -52,12 +48,6 @@ function Navbar() {
               ref={authorRef}
               onClick={(e)=>clickFilterButton(e, '/author')}>
               Author
-            </button>
-            <button 
-              className="filter-btn not-active-btn"
-              ref={subjectRef}
-              onClick={(e)=>clickFilterButton(e, '/subject')}>
-              Subject
             </button>
         </nav>
     </>

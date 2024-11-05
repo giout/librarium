@@ -9,9 +9,6 @@ export const url = {
         if (section.toLowerCase() == 'name'){
             return `${apiBooks}/search.json?q=${param}`; 
         }
-        if (section.toLowerCase() == 'subject'){
-            return `${apiBooks}/subjects/${param}.json`;
-        }
     },
     covers: (cover) => {
         return `${apiCovers}/${cover}-L.jpg`;
