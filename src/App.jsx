@@ -20,7 +20,7 @@ function App() {
           </main>
           <footer>
             <span>Giovanni Urdaneta - 2024</span>
-            <span>Data provided by <strong><a href="https://openlibrary.org/developers/api" target="_blank">OpenLibrary API</a></strong></span>
+            <span>Data provided by <strong><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">The Movie Database</a></strong></span>
           </footer>
         </div>
       </Router>
