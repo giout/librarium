@@ -26,7 +26,7 @@ export const searchBooks = async (section, param) => {
             sample.subjects = doc.subject.length > 5 ? doc.subject.slice(0,5) : doc.subject 
         }  
         if (doc.person) {
-            sample.characters = doc.person.length > 5 ? doc.person.slice(0,3) : doc.person 
+            sample.characters = doc.person.length > 3 ? doc.person.slice(0,3) : doc.person 
         }  
         books.push(sample)
     }
