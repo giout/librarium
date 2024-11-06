@@ -288,7 +288,7 @@ footer {
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   margin-bottom: 3.5rem;
 }
