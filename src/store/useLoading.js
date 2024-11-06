@@ -1,12 +1,13 @@
 import { create } from 'zustand';
 
 const useLoading = create((set) => ({
-    loading: false,
-    setLoading: () => {
-        set({ loading: true })
+    searchLoading: false,
+    scrollLoading: false,
+    setSearchLoading: (value) => {
+        set({ searchLoading: value })
     },
-    quitLoading: () => {
-        set({ loading: false })
+    setScrollLoading: (value) => {
+        set({ scrollLoading: value })
     }
 }));
 
