@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import useButton from "../store/useButton";
 import useSection from "../store/useSection";
+import useAPI from '../store/useAPI'
 
 function Navbar() {
   const { setActive } = useButton();
@@ -10,6 +11,7 @@ function Navbar() {
   const tvRef = useRef(null);
   const navigate = useNavigate();
   const { setSection, section } = useSection();
+  const { clean } = useAPI();
 
   useEffect(() => {
     // filter button will be activated according to the current section
@@ -27,6 +29,7 @@ function Navbar() {
   
   const clickFilterButton = (e, route) => {
     setActive(e.target);
+    clean();
     navigate(route);
   }
 
