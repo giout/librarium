@@ -22,7 +22,7 @@ function SearchBar() {
 
     return (
     <div className="search-bar">
-        <input className="search-input" type="text" placeholder={`Search by ${section}...`} onChange={(e) => handleInput(e)}/>
+        <input className="search-input" type="text" placeholder={`Search for ${section}...`} onChange={(e) => handleInput(e)}/>
         <button 
             className="search-button" 
             onClick={handleSearch} 
