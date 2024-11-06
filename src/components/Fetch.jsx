@@ -35,17 +35,16 @@ function Fetch(props) {
   }
 
   const handleScroll = useCallback(async () => {
+    // if scroll to the bottom is made and the amount of entries are less than all results
     if (
-      window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight
+      window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight && data.length < results  
     ) {
-      setScrollLoading(true);   
-      setTimeout(async () => {
-        // fetch data with the input that was set on initial search
-        await fetchData(section, searchInput);
-      }, 2000);
+      setScrollLoading(true);
+      // fetch data with the input that was set on initial search
+      await fetchData(section, searchInput);
       setScrollLoading(false);
     }
-  }, [fetchData, searchInput, section, setScrollLoading ]);
+  }, [fetchData, searchInput, section, setScrollLoading, data, results ]);
 
   useEffect(() => {
     setSection(props.section);
