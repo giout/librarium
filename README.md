@@ -1,8 +1,14 @@
-# React + Vite
+# Memorabilia
+Web application that retrieves information about tv shows and movies. This system is fetching data from [The Movie Database API](https://developer.themoviedb.org/reference/intro/getting-started).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://memorabilia.onrender.com
 
-Currently, two official plugins are available:
+## Tech stack
+* [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+* [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+* [React](https://es.react.dev/)
+* [Vite](https://vite.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## System architecture
+![alt text](docs/architecture.png)
