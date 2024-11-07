@@ -45,13 +45,15 @@ function Navbar() {
             <button 
               className="filter-btn not-active-btn" 
               ref={filmsRef}
-              onClick={(e)=>clickFilterButton(e, '/films')}>
+              onClick={(e)=>clickFilterButton(e, '/films')}
+              disabled={section == 'films'}>
               Films
             </button>
             <button 
               className="filter-btn not-active-btn"
               ref={tvRef}
-              onClick={(e)=>clickFilterButton(e, '/tv')}>
+              onClick={(e)=>clickFilterButton(e, '/tv')}
+              disabled={section == 'tv'}>
               TV
             </button>
         </nav>
