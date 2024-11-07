@@ -81,6 +81,15 @@ body {
   gap: 2rem;
 }
 
+.card-date {
+  width: 85%;
+  color: var(--fifth-color);
+  display: inline-block;
+  word-wrap: break-word;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
 .card-img-container {
   width: 85%;
   height: 22rem;
@@ -104,14 +113,6 @@ body {
   line-height: 0.9;
 }
 
-.card-date {
-  width: 85%;
-  color: var(--fifth-color);
-  display: inline-block;
-  word-wrap: break-word;
-  font-size: 2rem;
-  text-align: center;
-}
 
 .fetch-container {
   width: 100%;
