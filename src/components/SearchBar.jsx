@@ -7,8 +7,8 @@ function SearchBar(props) {
     const { setSearchInput } = useSearchInput();
 
     const handleInput = (e) => {
-        props.onSearch(e.target.value);
         setSearchInput(e.target.value);
+        props.onSearch(e.target.value);
     }
 
     return (

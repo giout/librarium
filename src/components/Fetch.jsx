@@ -24,14 +24,16 @@ function Fetch(props) {
     toggleModal();
   }
 
-  const handleSearch = async (inputValue) => {
+  const handleSearch = (inputValue) => {
       // use useAPI hook clean method to restart pagination
       clean();
       setSearchLoading(true);
       // store input current value to use it when fetching data on scrolling
       setSearchInput(inputValue); 
-      await searchData(section, inputValue);
-      setSearchLoading(false);
+      setTimeout(async () => {
+        await searchData(section, inputValue);
+        setSearchLoading(false);
+      }, 250);
   }
 
   const handleScroll = useCallback(async () => {
