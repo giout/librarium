@@ -18,21 +18,24 @@ function Fetch(props) {
   const { searchLoading, scrollLoading, setSearchLoading, setScrollLoading } = useLoading();
   const { searchData, clean } = useAPI();
   const { searchInput } = useSearchInput();
+  const searchDelayMs = 100;
 
   const handleCardClick = (entry) => {
     setSelectedCard(entry);
     toggleModal();
   }
 
-  const handleScroll = useCallback(async () => {
+  const handleScroll = useCallback(() => {
     // if scroll to the bottom is made and the amount of entries are less than all results
     if (
-      window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight && data.length < results  
+      window.innerHeight + document.documentElement.scrollTop + 100 >= document.documentElement.scrollHeight && data.length < results  
     ) {
       setScrollLoading(true);
       // fetch data with the input that was set on initial search
-      await searchData(section, searchInput);
-      setScrollLoading(false);
+      setTimeout(async () => {
+        await searchData(section, searchInput);
+        setScrollLoading(false);
+      }, searchDelayMs);
     }
   }, [searchData, searchInput, section, setScrollLoading, data, results ]);
 
@@ -54,7 +57,7 @@ function Fetch(props) {
       setTimeout(async () => {
         await searchData(section, searchInput);
         setSearchLoading(false);
-      }, 100);
+      }, searchDelayMs);
   }, [clean, searchData, setSearchLoading, searchInput, section]);
 
   return (
