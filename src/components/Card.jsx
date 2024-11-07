@@ -7,7 +7,8 @@ function Modal(props) {
           <img className="card-img" src={props.imgSrc} />
         </div>
         <span className="card-title text-overflow"><strong>{props.title || ''}</strong></span>
-        <span className="card-date text-overflow">{props.date || ''}</span>
+        {/* show year only */}
+        <span className="card-date text-overflow">{props.date ? props.date.substring(0,4) : ''}</span>
     </div>
   )
 }
