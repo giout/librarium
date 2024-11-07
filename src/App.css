@@ -33,6 +33,11 @@ body {
   color: black;
 }
 
+.cancel-icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
 
 .cancel-modal {
   top: 1rem;
@@ -131,11 +136,6 @@ body {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-}
-
-.filter-btn:active {
-  background-color: var(--third-color);
-  color: var(--first-color);
 }
 
 footer {
