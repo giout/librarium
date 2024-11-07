@@ -2,13 +2,12 @@ import PropTypes from 'prop-types';
 import useSection from "../store/useSection";
 import useSearchInput from '../store/useSearchInput';
 
-function SearchBar(props) {
+function SearchBar() {
     const { section } = useSection();
     const { setSearchInput } = useSearchInput();
 
     const handleInput = (e) => {
         setSearchInput(e.target.value);
-        props.onSearch(e.target.value);
     }
 
     return (

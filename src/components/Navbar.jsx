@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import useButton from "../store/useButton";
 import useSection from "../store/useSection";
-import useAPI from '../store/useAPI'
+import useAPI from '../store/useAPI';
 
 function Navbar() {
   const { setActive } = useButton();

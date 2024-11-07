@@ -17,23 +17,11 @@ function Fetch(props) {
   const { data, results } = useAPI();
   const { searchLoading, scrollLoading, setSearchLoading, setScrollLoading } = useLoading();
   const { searchData, clean } = useAPI();
-  const { searchInput, setSearchInput } = useSearchInput();
+  const { searchInput } = useSearchInput();
 
   const handleCardClick = (entry) => {
     setSelectedCard(entry);
     toggleModal();
-  }
-
-  const handleSearch = (inputValue) => {
-      // use useAPI hook clean method to restart pagination
-      clean();
-      setSearchLoading(true);
-      // store input current value to use it when fetching data on scrolling
-      setSearchInput(inputValue); 
-      setTimeout(async () => {
-        await searchData(section, inputValue);
-        setSearchLoading(false);
-      }, 250);
   }
 
   const handleScroll = useCallback(async () => {
@@ -57,9 +45,21 @@ function Fetch(props) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
+  // when search input or section change, fetch data
+  useEffect(() => {
+      // use useAPI hook clean method to restart pagination
+      clean();
+      setSearchLoading(true);
+      // store input current value to use it when fetching data on scrolling
+      setTimeout(async () => {
+        await searchData(section, searchInput);
+        setSearchLoading(false);
+      }, 100);
+  }, [clean, searchData, setSearchLoading, searchInput, section]);
+
   return (
     <div className="fetch-container">
-      <SearchBar onSearch={handleSearch}/>
+      <SearchBar/>
       <span className="results">{results == 0 ? '' : results +  ' results...'}</span>
       <div className="cards-container">
         {
