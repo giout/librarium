@@ -71,14 +71,18 @@ function Fetch(props) {
           ) : (
             <>
                 {
-                  data.map((entry, index) => (
-                    <Card 
-                      key={index}
-                      title={entry.name}
-                      date={entry.date}
-                      imgSrc={entry.cover} 
-                      clickMethod={() => handleCardClick(entry)}/>
-                  ))
+                  data.length > 0 ? (
+                    data.map((entry, index) => (
+                      <Card 
+                        key={index}
+                        title={entry.name}
+                        date={entry.date}
+                        imgSrc={entry.cover} 
+                        clickMethod={() => handleCardClick(entry)}/>
+                    ))
+                  ) : (
+                    <span className="results">No results were found...</span>
+                  )
                 }
             </>
           )
