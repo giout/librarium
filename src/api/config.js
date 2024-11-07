@@ -11,6 +11,14 @@ export const url = {
             return `${api}/search/tv?api_key=${apiKey}&query=${param}&page=${page}`;
         }
     },
+    discover: (section, page=1) => {
+        if (section.toLowerCase() == 'films'){
+            return `${api}/discover/movie?api_key=${apiKey}&page=${page}`;
+        }
+        if (section.toLowerCase() == 'tv'){
+            return `${api}/discover/tv?api_key=${apiKey}&page=${page}`;
+        }
+    },
     poster: (poster) => {
         return `${apiPoster}/${poster}`;
     }

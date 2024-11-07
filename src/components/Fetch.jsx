@@ -16,7 +16,7 @@ function Fetch(props) {
   const [ selectedCard, setSelectedCard ] = useState({});
   const { data, results } = useAPI();
   const { searchLoading, scrollLoading, setSearchLoading, setScrollLoading } = useLoading();
-  const { fetchData, clean } = useAPI();
+  const { searchData, clean } = useAPI();
   const { searchInput, setSearchInput } = useSearchInput();
 
   const handleCardClick = (entry) => {
@@ -30,7 +30,7 @@ function Fetch(props) {
       setSearchLoading(true);
       // store input current value to use it when fetching data on scrolling
       setSearchInput(inputValue); 
-      await fetchData(section, inputValue);
+      await searchData(section, inputValue);
       setSearchLoading(false);
   }
 
@@ -41,10 +41,10 @@ function Fetch(props) {
     ) {
       setScrollLoading(true);
       // fetch data with the input that was set on initial search
-      await fetchData(section, searchInput);
+      await searchData(section, searchInput);
       setScrollLoading(false);
     }
-  }, [fetchData, searchInput, section, setScrollLoading, data, results ]);
+  }, [searchData, searchInput, section, setScrollLoading, data, results ]);
 
   useEffect(() => {
     setSection(props.section);

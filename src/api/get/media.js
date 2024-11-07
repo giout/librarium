@@ -1,8 +1,13 @@
 import { url } from "../config"
 
-export const searchForMedia = async (section, param, page) => {
+export const searchForMedia = async ({ section, param, page }) => {
+
+    const route = param ? 
+        url.search(section, param, page) : 
+        url.discover(section, page);
+
     // http request
-    const res = await fetch(url.search(section, param, page));
+    const res = await fetch(route);
 
     // handle error
     if (!res.ok) {
