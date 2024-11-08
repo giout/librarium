@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import useButton from "../store/useButton";
 import useSection from "../store/useSection";
 import useAPI from '../store/useAPI';
+import SearchBar from "./SearchBar";
 
 function Navbar() {
   const { setActive } = useButton();
@@ -42,20 +43,23 @@ function Navbar() {
           <span className="white-text title">Memorabilia</span>
         </nav>
         <nav className="navbar2">
+          <div className="filter-container">
             <button 
-              className="filter-btn not-active-btn" 
+              className="filter-btn films-btn not-active-btn" 
               ref={filmsRef}
               onClick={(e)=>clickFilterButton(e, '/films')}
               disabled={section == 'films'}>
               Films
             </button>
             <button 
-              className="filter-btn not-active-btn"
+              className="filter-btn tv-btn not-active-btn"
               ref={tvRef}
               onClick={(e)=>clickFilterButton(e, '/tv')}
               disabled={section == 'tv'}>
               TV
             </button>
+          </div>
+          <SearchBar/>
         </nav>
     </>
   )

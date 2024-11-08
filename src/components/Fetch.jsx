@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import useSection from '../store/useSection';
-import SearchBar from './SearchBar';
 import { useEffect, useState, useCallback } from 'react';
 import Card from './Card';
 import Modal from './Modal';
@@ -62,7 +61,6 @@ function Fetch(props) {
 
   return (
     <div className="fetch-container">
-      <SearchBar/>
       <span className="results">{results == 0 ? '' : results +  ' results...'}</span>
       <div className="cards-container">
         {
