@@ -13,9 +13,8 @@ function Fetch(props) {
   const { section, setSection } = useSection();
   const { toggleModal } = useModal();
   const [ selectedCard, setSelectedCard ] = useState({});
-  const { data, results } = useAPI();
+  const { data, results, searchData, clean } = useAPI();
   const { searchLoading, scrollLoading, setSearchLoading, setScrollLoading } = useLoading();
-  const { searchData, clean } = useAPI();
   const { searchInput } = useSearchInput();
   const searchDelayMs = 50;
 

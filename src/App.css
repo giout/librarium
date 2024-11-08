@@ -5,6 +5,7 @@
   --fourth-color: #323232;
   --fifth-color: whitesmoke;
   --sixth-color: #212121;
+  --seventh-color: #4c4c4c;
   --title-size: 2.5rem;
 }
 
@@ -69,8 +70,8 @@ body {
   cursor: pointer;
 }
 
-.card-container:active {
-  background-color: var(--second-color);
+.card-container:hover {
+  background-color: var(--seventh-color);
 }
 
 .cards-container {
@@ -95,7 +96,7 @@ body {
 .card-img-container {
   width: 85%;
   height: 22rem;
-  background-color: var(--fourth-color);
+  background-color: transparent;
 }
 
 .card-img {
