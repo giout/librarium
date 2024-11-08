@@ -41,11 +41,12 @@ body {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  fill: var(--fifth-color);
 }
 
 .cancel-modal {
-  top: 1rem;
-  right: 1rem;
+  top: 1.25rem;
+  right: 1.5rem;
   position: absolute;
   background: transparent;
   border: none;
@@ -134,7 +135,7 @@ body {
 }
 
 .first-color-icon {
-  fill: var(--fourth-color);
+  fill: var(--fifth-color);
 }
 
 .filter-btn {
@@ -280,7 +281,7 @@ footer {
 }
 
 .modal {
-  background-color: var(--fifth-color);
+  background-color: var(--fourth-color);
   width: 24rem;
   height: 32.5rem;
   border-radius: 40px;
@@ -292,6 +293,7 @@ footer {
   align-items: center;
   justify-content: start;
   flex-direction: column;
+  color: var(--fifth-color);
 }
 
 .modal-content {
@@ -321,8 +323,10 @@ footer {
 }
 
 .modal-line {
-  border: 0.1rem solid black;
-  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  border: 0.1rem dashed var(--fifth-color);
+  width: 95%;
 }
 
 .modal-overlay {
@@ -339,17 +343,18 @@ footer {
 
 .modal-text {
   font-size: 1.2rem;
-  width: 100%;
+  width: 95%;
 }
 
 .modal-title {
   font-size: 1.7rem;
-  line-height: 0.9;
-  margin-bottom: 1rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  margin-right: 2rem;
 }
 
 .modal-wrap-text {
-  width: 100%;
+  width: 95%;
   white-space: normal;
   word-wrap: break-word;
 }

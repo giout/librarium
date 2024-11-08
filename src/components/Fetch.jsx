@@ -17,7 +17,7 @@ function Fetch(props) {
   const { searchLoading, scrollLoading, setSearchLoading, setScrollLoading } = useLoading();
   const { searchData, clean } = useAPI();
   const { searchInput } = useSearchInput();
-  const searchDelayMs = 100;
+  const searchDelayMs = 50;
 
   const handleCardClick = (entry) => {
     setSelectedCard(entry);
