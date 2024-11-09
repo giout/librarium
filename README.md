@@ -11,4 +11,4 @@ https://memorabilia.onrender.com
 * [Vite](https://vite.dev/)
 
 ## System architecture
-![alt text](docs/architecture.png)
+![alt text](./docs/architecture.png)
