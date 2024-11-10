@@ -21,8 +21,8 @@ a:checked {
 }
 
 .active-btn {
-  background-color: var(--fourth-color);
-  color: var(--fifth-color);
+  background-color: var(--fifth-color);
+  color: var(--fourth-color);
 }
 
 body {
@@ -381,7 +381,8 @@ footer {
 }
 
 .not-active-btn {
-  background-color: var(--fifth-color);
+  background-color: var(--fourth-color);
+  color: var(--fifth-color);
 }
 
 .option {
